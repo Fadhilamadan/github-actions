@@ -1,4 +1,4 @@
-name: Running Code Coverage
+name: CodeCov
 
 on: [push, pull_request]
 
@@ -32,3 +32,6 @@ jobs:
       uses: codecov/codecov-action@v2
       with:
         token: ${{ secrets.CODECOV_TOKEN }}
+        files: ./coverage1.xml,./coverage2.xml
+        flags: unittests
+        name: codecov-umbrella
